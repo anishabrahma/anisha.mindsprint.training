@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example with Bootstrap</title>                                 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form onsubmit="performOperation(event)">
+            <div class="form-group">
+                <label for="operation">Select an operation:</label>
+                <select class="form-control" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="resultField">Result:</label>
+                <input type="text" class="form-control" id="resultField" value="24" readonly>
+            </div>
+            <div class="form-group">
+                <label for="otherField">Other Field:</label>
+                <input type="text" class="form-control" id="otherField">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function performOperation(event) {
+            event.preventDefault();
+            const operation = document.getElementById('operation').value;
+            const otherFieldValue = parseFloat(document.getElementById('otherField').value);
+            let result = 24; // Default value
+
+            switch (operation) {
+                case '+':
+                    result += otherFieldValue;
+                    break;
+                case '-':
+                    result -= otherFieldValue;
+                    break;
+                case '*':
+                    result *= otherFieldValue;
+                    break;
+                case '/':
+                    result /= otherFieldValue;
+                    break;
+                default:
+                    console.error('Invalid operation selected.');
+            }
+
+            document.getElementById('resultField').value = result;
+        }
+    </script>
+</body>
+</html>

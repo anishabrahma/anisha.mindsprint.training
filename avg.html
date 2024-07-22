@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Initialize an empty array to store user input
+const numbers = [];
+// Prompt the user for input until they enter a non-numeric value
+while (true) {
+    const input = prompt("Enter a number (or any non-numeric value to stop):");
+    if (!isNaN(input)) {
+        numbers.push(parseFloat(input));
+    } else {
+        break;
+    }
+}
+// Calculate the sum of all numbers
+let totalSum = 0;
+for (const number of numbers) {
+    totalSum += number;
+}
+// Calculate the average
+const average = totalSum / numbers.length;
+// Display the result
+console.log(`The average of the entered numbers is: ${average.toFixed(2)}`);
+    </script>
+</body>
+</html>

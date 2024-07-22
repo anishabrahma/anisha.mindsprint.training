@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num; // var declaration
+        num=20; //assigning values to variables
+        //assign declaration together
+        var data=78; //number
+        var name ="Anisha Brahma"; //string
+        var test=67>90; //false (boolean)
+        var x; // no value means undefined
+        //print values in browser
+        document.write("<h3> Data is "+data+"</h3>");
+        document.write("<h3> Name is "+name+"</h3>");
+        document.write("<h3> Condition is "+test+"</h3>");
+        document.write("<h3> Temporary value: "+x+" </h3>");
+        //print data to console (help you for debug purpose)
+        console.log("data", data);
+        console.log("Name", name);
+        console.log("Condition", test);
+        console.log("X", x);
+        //checking type of data
+        //typeof() will return type of your data
+        console.log(data,"it is type of", typeof(data));
+        console.log(name,"it is type of", typeof(data));
+        console.log(test,"it is type of", typeof(data));
+        console.log(X,"it is type of", typeof(data));
+
+        var obj= {name:"anisha", country:"India"};
+        console.log(obj, "it is type of"(obj));
+        var arr=[1,2,3,4,5,6,7,8];
+        console.log(arr, "it is type of"(arr));
+    </script>
+</body>
+</html>

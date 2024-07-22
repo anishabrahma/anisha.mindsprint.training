@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+<title> Registration</title>
+</head>
+<body>
+    <h1> Registration Form</h1> <hr>
+<form>
+    <label>First Name</label>
+    <input type="text" placeholder="First Name" name="fname"/><br><br>
+    <label>Last Name</label>
+    <input type="text" placeholder="Last Name" name="lname"/><br><br>
+    <label>Email</label>
+    <input type="text" placeholder="ab@gmail.com" name="fname"/><br><br>
+    <label>DOB</label>
+    <input type="date" placeholder="02-07-2024" name="date"/><br><br>
+    <label>Favourite Color</label>
+    <input type="color" name="color" value="#00ff00"/><br><br>
+    <label>Select Languages</label>
+    <input type="checkbox" value="EN" checked> English
+    <input type="checkbox" value="HN"> Hindi
+    <input type="checkbox" value="FR"> French <br><br>
+    <label>Gender</label>
+    <input type="radio" value="m" name="gender"/>Male
+    <input type="radio" value="f" name="gender"/>Female
+    <input type="radio" value="o" name="gender"/>Other
+<br><br>
+<label>Courses</label>
+<select multiple>
+    <option value="HTML">HTML</option>
+    <option value="CSS">CSS</option>
+    <option value="JS">JS</option>
+    <option value="SQL">SQL</option>
+</select>
+<label>Age:</label>
+<input type="number" name="age" min="18" max="55"><br><br>
+<label>Upload Profile</label>
+<input type="file" name="profile"><br><br>
+<label>Range</label>
+<input type="range" value="60" min="18" max="55"><br><br>
+<label>Password</label>
+<input type="password" name="pass" minlength="6" required><br><br>
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function usingChain(){
+            const promise = fetch('https://jsonplaceholder.typicode.com/users');
+            promise
+            .then(resp=>resp.json())
+            .then(json=>console.log(json))
+            .catch(err=>console.log(err))
+        }
+        async function fetchData(){
+            try{
+              const ress=await fetch('https://jsonplaceholder.typicode.com/users');
+              const jason= await ress.json();
+              console.log(jason);
+            }catch(error){
+                   console.log('error')
+            }
+        }
+        fetchData()
+    </script>
+</body>
+</html>

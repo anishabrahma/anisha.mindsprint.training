@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        // Create a new array which multiplies all elements by 3
+        const newArray = arr.map((val) => val * 3);
+        console.log(newArray);
+
+        // Filter data based on condition (even numbers)
+        const evenArray = arr.filter((val) => val % 2 === 0);
+        console.log(evenArray);
+
+        // Filter out elements divisible by 3
+        const filteredArray = arr.filter((val) => val % 3 !== 0);
+        console.log(filteredArray);
+
+        // Find the value 9 in the array
+        const findSome = arr.find((val) => val === 9);
+        console.log(`found ${findSome}`);
+
+        // Find the index of value 4 in the array
+        const findSomeIndex = arr.findIndex((val) => val === 4);
+        console.log(`found ${findSomeIndex}`);
+
+        const sum = arr.reduce((acc, curr) => acc + curr, 0);
+        console.log(sum);
+
+        const min = arr.reduce((acc, curr) => (acc > curr ? acc : curr), arr[0]);
+        console.log(min);
+    </script>
+</body>
+</html>

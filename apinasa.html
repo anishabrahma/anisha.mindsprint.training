@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "data"></div>
+    <button onclick = "getNasa()">Fetch Data from API</button>
+ 
+    <script>
+    async function getNasa(){
+        try{
+            const resp = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+            const json = await resp.json()
+            let html = `
+              <h1>${json.title}</h1>
+              <p>${json.explanation}</p><br>
+              <img src = '${json.url}' alt = ${json.title}' height = '400'
+              width = '1200'>
+              <h4>Date:${json.date}</h4>
+              <hr>
+              <h3>Image Copyright: ${json.copyright}</h3>`
+ 
+              document.querySelector('#data').innerHTML=html
+        }catch(error){
+            console.log(error);
+        }
+    }
+ 
+    fetchdata()
+ 
+    </script>
+</body>
+</html>

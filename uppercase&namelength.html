@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper Case Values</title>
+</head>
+<body>
+    <script>
+        const values = ["mind", "Sprint", "pvt", "ltd"];
+        const upperCaseValues = values.map(value => value.toUpperCase());
+        console.log(upperCaseValues); 
+// Initialize an empty array to store user names
+const names = [];
+
+// Prompt the user for input 5 times
+for (let i = 0; i < 5; i++) {
+    const name = prompt(`Enter name ${i + 1}:`);
+    names.push(name);
+}
+
+// Print the names and their lengths
+for (const name of names) {
+    console.log(`Name: ${name}, Length: ${name.length}`);
+}
+    
+    </script>
+</body>
+</html>

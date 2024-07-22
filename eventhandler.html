@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="hide" id="data">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, maxime! Aliquid provident ut voluptatem, autem repellat minima itaque adipisci! Molestiae obcaecati tempora eveniet incidunt totam inventore vitae iure soluta voluptatum.</p>
+    <button id="btn" onclick="show()">Show</button>
+    <script>
+    function show(){
+        let btnName=document.getElementById('btn');
+        console.log(btnName.textContent);
+        if(btnName.textContent=='Show'){
+            document.getElementById('data').className='show';
+            btnName.textContent='Hide';
+            return;
+        }
+        if(btnName.textContent=='Hide'){
+            document.getElementById('data').className='hide';
+            btnName.textContent='Show';
+            return;
+        }
+    }
+</script>
+</body>
+</html>

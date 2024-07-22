@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const map= new Map();
+        map.set(1,{name:"Alex",country:"US"});
+        map.set(2,{name:"Bob",country:"US"});
+        map.set(3,{name:"Anisha",country:"INDIA"});
+        map.set(4,{name:"Varshini",country:"INDIA"});
+        console.log(map);
+        console.log(map.has(4));
+        console.log(map.get(2)); //get values based on key
+        console.log(map.keys());
+        console.log(map.values());
+        map.forEach((val,key))=>{
+            console.log(key+':'+val.name+""+val.country);
+        }
+    </script>
+</body>
+</html>
